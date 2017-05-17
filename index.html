@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <title>react-router</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+  <!-- 打包的css文件 -->
+  <link href="/build/css.all.css" type="text/css" rel="stylesheet">
+
+</head>
+  <body>
+    <div id="app"></div>
+    <!-- 加载前的遮罩层 -->
+    <div id="shadow_over" style="position: absolute;display: block;background-color: #f5f5f5;top: 0;left: 0;width: 100%;height: 100%;opacity:0.5;">
+      <div style="display: block;position: absolute;top: 40%;left: 40%;width: 20%;height: 20%;">
+        <img src="src/images/loading.gif"/>
+        <span>加载中。。。</span>
+      </div>
+    </div>
+
+    <script>
+      document.write('<script src="/build/webpack-assets.js?v=' + Math.random() + '"><\/script>');
+    </script>
+    <script>
+      document.write('<script src="' + window.WEBPACK_ASSETS['entry'].js + '"><\/script>');
+    </script>
+    <script>
+      // 加载完成后去除遮罩层
+      window.onload = function () {
+        document.getElementById("shadow_over").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

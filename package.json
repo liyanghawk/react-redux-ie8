@@ -1,0 +1,55 @@
+{
+  "name": "react-router",
+  "version": "0.0.1",
+  "description": "react-router初版",
+  "main": "./src/entry.js",
+  "scripts": {
+    "start": "webpack-dev-server --history-api-fallback --config webpack.config.dev.js --progress --port 3000",
+    "start:prod": "webpack-dev-server --history-api-fallback --config webpack.config.production.js --progress --port 3001",
+    "build": "npm run clean && npm run build:webpack",
+    "build:webpack": "webpack --config webpack.config.dev.js",
+    "clean": "rimraf build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:liyanghawk/react-router.git"
+  },
+  "author": "bonc",
+  "license": "ISC",
+  "homepage": "https://github.com/liyanghawk/react-router.git",
+  "dependencies": {
+    "assets-webpack-plugin": "^3.5.0",
+    "console-polyfill": "^0.2.3",
+    "css-loader": "^0.26.1",
+    "echarts": "^2.2.8",
+    "es5-shim": "^4.5.9",
+    "es6-promise": "^3.0.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "fetch-ie8": "^1.4.0",
+    "file-loader": "^0.9.0",
+    "immutable": "^3.8.1",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "2.3.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "es3ify-loader": "^0.1.0",
+    "rimraf": "^2.5.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
