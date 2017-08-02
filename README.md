@@ -1,25 +1,35 @@
-# 准备
-`npm install`
+# react-redux-ie8-boilerplate
+
+## 程序安装
+### Node Version
+```
+nodejs 4.4.4
+```
+### 准备
+```
+npm install
 // 设置淘宝镜像
 npm config set registry https://registry.npm.taobao.org
 
 // 设置显示npm安装进度
 npm config set loglevel=http
-
-
-# 开发
-src 是源代码，通过webpack打包到build文件中
-`npm start` 启动服务开发。
-`npm start:prod` 启动服务生产环境开发（IE8调试）。
-
-#访问地址
+```
+### 开发
+```
+npm start #启动服务开发。
+npm start:prod #启动服务生产环境开发（IE8调试）。
+```
+### 访问地址
 http://localhost:3000
-
-
-#Git地址
-git remote add origin https://github.com/liyanghawk/react-router.git
-
-# 文件路径说明：
+## 特性
+* [react](https://github.com/facebook/react)
+* [redux](https://github.com/rackt/redux)
+* [react-router](https://github.com/rackt/react-router)
+* [webpack](https://github.com/webpack/webpack)
+* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+* [babel](https://github.com/babel/babel)
+## 程序目录
+```
 build               打包生成文件位置
 │
 │      
@@ -58,3 +68,7 @@ webpack.config.dev.js            开发配置文件
 │
 │
 webpack.config.production.js     生产配置文件
+```
+## 兼容性
+## 其它
+- 该项目用于测试i8性能，可以当做脚手架使用
