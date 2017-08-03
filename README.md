@@ -23,7 +23,6 @@ npm start:prod #启动服务生产环境开发（IE8调试）。
 http://localhost:3000
 ## 特性
 * [react](https://github.com/facebook/react)
-* [redux](https://github.com/rackt/redux)
 * [react-router](https://github.com/rackt/react-router)
 * [webpack](https://github.com/webpack/webpack)
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
@@ -70,5 +69,20 @@ webpack.config.dev.js            开发配置文件
 webpack.config.production.js     生产配置文件
 ```
 ## 兼容性
+
+* [react](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) react@0.14.x支持IE8
+* [react-router](https://github.com/ReactTraining/react-router) react-router@2.3.0支持IE8
+* [webpack](https://github.com/webpack/webpack) 打包工具：webpack@1.12.9支持IE8
+* [webpack-dev-server](https://github.com/webpack/webpack-dev-server) nodejs的express服务器：webpack-dev-server@1.14.0支持IE8（只用于开发环境）
+* [console-polyfill](https://github.com/paulmillr/console-polyfill) 浏览器兼容console命令
+* [es5-shim](https://github.com/es-shims/es5-shim) 
+* [es5-sham](https://github.com/es-shims/es5-shim) 
+* [es6-promise](https://github.com/es-shims/es5-shim) es6 promise使用在ie9以下的polyfill
+* [fetch-ie8](https://github.com/camsong/fetch-ie8) es5-shim, es5-sham and es6-promise搭配使用可以支持ie8浏览器的fetch
+* [echarts](https://github.com/ecomfe/echarts) 使用echarts@2.2.8可以IE8浏览器（图片下载不支持IE8）
+
 ## 其它
 - 该项目用于测试i8性能，可以当做脚手架使用
+
+## 参考
+* [react-ie8](https://github.com/xcatliu/react-ie8)
