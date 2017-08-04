@@ -31,9 +31,16 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 
 const AppRoute = require('./router/route');
+const configureStore = require('./js/store/configureStore');
+
+
+// const store = configureStore(window.__INITIAL_STATE__)
+const store = configureStore(window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const browserHistory = require('react-router');
+
 
 ReactDOM.render(
-        <AppRoute/>,
+        <AppRoute store={store} history={browserHistory} />,
   document.getElementById('app')
 );
 

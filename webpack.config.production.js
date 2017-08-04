@@ -45,7 +45,7 @@ module.exports = {
       component: path.resolve(__dirname, 'src/js/component'),
       // 以前你可能这样引用 import { Nav } from '../../containers'
       // 现在你可以这样引用 import { Nav } from 'app/containers'
-
+      actions: path.resolve(__dirname, 'src/js/actions'),
       images:path.resolve(__dirname, 'src/images')
 
       // 注意：别名只能在.js文件中使用。

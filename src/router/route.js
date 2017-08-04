@@ -15,28 +15,22 @@ require('console-polyfill');
 
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
 
 const helloWorld = require("containers/HelloWorld");
 const NotFoundPage = require("component/Common/404");
+const Counter = require("containers/Counter");
 
-export default class AppRoute extends React.Component {
+const AppRoute = ({ store, history }) => (
+    <Provider store={store}>
+        <Router history={browserHistory}>
+            <Route path="/" >
+                <IndexRoute component={helloWorld}/>
+                <Route path="counter" component={Counter} />
+                <Route path="*" component={NotFoundPage} />
+            </Route>
+        </Router>
+    </Provider>
+)
 
-    requireAuth (nextState, replace) {
-        // todo 书写组件进入前的逻辑处理
-    }
-
-    render() {
-
-        return(
-            <Router history={browserHistory}>
-                <Route path="/" >
-                    <IndexRoute component={helloWorld} onEnter={this.requireAuth}/>
-
-                    {/*<Route path="/" component={helloWorld} onEnter={this.requireAuth}/>*/}
-                    <Route path="*" component={NotFoundPage} onEnter={this.requireAuth}/>
-                </Route>
-            </Router>
-        )
-
-    }
-}
+export default AppRoute;
