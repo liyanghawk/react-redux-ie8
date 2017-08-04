@@ -72,6 +72,10 @@ webpack.config.production.js     生产配置文件
 
 * [react](https://facebook.github.io/react/blog/2016/01/12/discontinuing-ie8-support.html) react@0.14.x支持IE8
 * [react-router](https://github.com/ReactTraining/react-router) react-router@2.3.0支持IE8
+* [react-redux](https://github.com/reactjs/react-redux) 官方推荐React与Redux绑定推荐使用
+* [redux](https://github.com/reactjs/redux) Redux is a predictable state container for JavaScript apps.
+* [redux-thunk](https://github.com/reactjs/redux) Redux异步的中间件
+* [redux-logger](https://github.com/reactjs/redux) Redux日志中间件
 * [webpack](https://github.com/webpack/webpack) 打包工具：webpack@1.12.9支持IE8
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server) nodejs的express服务器：webpack-dev-server@1.14.0支持IE8（只用于开发环境）
 * [console-polyfill](https://github.com/paulmillr/console-polyfill) 浏览器兼容console命令
