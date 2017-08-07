@@ -9,10 +9,6 @@
  * date: 2017/05/15
  */
 
-require('es5-shim');
-require('es5-shim/es5-sham');
-require('console-polyfill');
-
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';

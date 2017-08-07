@@ -55,7 +55,7 @@ module.exports = {
       },
       {
         test: /\.(css|less)$/,
-        loader:'style!css?modules&localIdentName=[local]!less'
+        loader: ExtractTextPlugin.extract("style-loader","css?modules&localIdentName=[local]!less-loader")
       },
       {
         test: /(fontawesome-webfont|glyphicons-halflings-regular)\.(woff|woff2|ttf|eot|svg)($|\?)/,
@@ -76,5 +76,14 @@ module.exports = {
         loaders: ['es3ify-loader'],
       },
     ],
+  },
+  // 代理服务器，作用类似nginx
+  devServer: {
+    proxy: {
+      '/test1' : {
+        target: 'http://192.168.31.8:9000',
+        secure: false
+      }
+    }
   }
 };

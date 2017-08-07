@@ -84,4 +84,13 @@ module.exports = {
       },
     ],
   },
+  // 代理服务器，作用类似nginx
+  devServer: {
+    proxy: {
+      '/test1' : {
+        target: 'http://192.168.31.8:9000',
+        secure: false
+      }
+    }
+  }
 };

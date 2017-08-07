@@ -4,7 +4,7 @@
   "description": "react-router初版",
   "main": "./src/entry.js",
   "scripts": {
-    "start": "webpack-dev-server --history-api-fallback --config webpack.config.dev.js --progress --port 3000",
+    "start": "webpack-dev-server --history-api-fallback --config webpack.config.dev.js --inline --hot --progress --port 3000",
     "start:prod": "webpack-dev-server --history-api-fallback --config webpack.config.production.js --progress --port 3001",
     "build": "npm run clean && npm run build:webpack",
     "build:webpack": "webpack --config webpack.config.dev.js",
@@ -21,7 +21,7 @@
   "dependencies": {
     "assets-webpack-plugin": "^3.5.0",
     "babel-polyfill": "^6.23.0",
-    "console-polyfill": "^0.2.3",
+    "console-polyfill": "^0.3.0",
     "css-loader": "^0.26.1",
     "echarts": "^2.2.8",
     "es5-shim": "^4.5.9",

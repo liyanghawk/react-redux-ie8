@@ -78,7 +78,7 @@ webpack.config.production.js     生产配置文件
 * [redux-logger](https://github.com/reactjs/redux) Redux日志中间件
 * [webpack](https://github.com/webpack/webpack) 打包工具：webpack@1.12.9支持IE8
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server) nodejs的express服务器：webpack-dev-server@1.14.0支持IE8（只用于开发环境）
-* [console-polyfill](https://github.com/paulmillr/console-polyfill) 浏览器兼容console命令
+* [console-polyfill](https://github.com/paulmillr/console-polyfill) 浏览器兼容console命令(使浏览器兼容的方案console.log=function(){})
 * [es5-shim](https://github.com/es-shims/es5-shim) 
 * [es5-sham](https://github.com/es-shims/es5-shim) 
 * [es6-promise](https://github.com/es-shims/es5-shim) es6 promise使用在ie9以下的polyfill

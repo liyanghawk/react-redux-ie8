@@ -9,7 +9,7 @@ class Counter extends Component {
     render() {
         const props = this.props
         const { store } = this.context;
-        debugger;
+        // debugger;
         return (
             <div className="box">
                 <Timer {...props} />
