@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run build:webpack",
     "build:webpack": "webpack --config webpack.config.dev.js",
     "clean": "rimraf build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint webpack.config.dev.js && echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,12 +20,18 @@
   "homepage": "https://github.com/liyanghawk/react-router.git",
   "dependencies": {
     "assets-webpack-plugin": "^3.5.0",
-    "babel-polyfill": "^6.23.0",
+    "babel-eslint": "^7.2.3",
     "console-polyfill": "^0.3.0",
     "css-loader": "^0.26.1",
     "echarts": "^2.2.8",
     "es5-shim": "^4.5.9",
     "es6-promise": "^3.0.2",
+    "eslint": "^4.4.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "fetch-ie8": "^1.4.0",
     "file-loader": "^0.9.0",
@@ -44,7 +50,9 @@
     "redux-saga": "^0.12.0",
     "redux-thunk": "^2.0.1",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7"
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
@@ -54,8 +62,6 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "es3ify-loader": "^0.1.0",
-    "rimraf": "^2.5.3",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "rimraf": "^2.5.3"
   }
 }

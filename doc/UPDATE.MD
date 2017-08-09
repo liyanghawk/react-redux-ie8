@@ -2,6 +2,7 @@
 * webpack.config.dev.js文件中添加devServer支持，可代理请求，解决fetch的ie8跨域问题
 * 在entry.js中添加es6-promise、fetch-ie8，实现ie8的fetch兼容（ie8实际还是使用的ActiveXObject来实现XMLHttpRequest对象）
 * 添加webpack的css提取，可以用于ie8，也可提前预加载样式文件
+* console在ie里面不识别，只有开启F12开发模式才可以，所以将console放入整体的ie8-pollyfill种
 * 开发模式添加热加载
 ```
 if(installedModules[request].parents.indexOf(moduleId) < 0)
@@ -17,3 +18,5 @@ in IE8
 typeof con[method] 为object
 ```
 参考[FYI: Doesn't abstract console.log differences between IE & Chrome #8](https://github.com/paulmillr/console-polyfill/issues/8)
+* 添加eslint-import-resolver-webpack解决webpack中alias问题
+参考https://stackoverflow.com/questions/41476397/eslint-webpack-resolver-doesnt-work

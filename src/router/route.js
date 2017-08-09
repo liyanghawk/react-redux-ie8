@@ -13,20 +13,25 @@ import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 
-const helloWorld = require("containers/HelloWorld");
-const NotFoundPage = require("component/Common/404");
-const Counter = require("containers/Counter");
+const helloWorld = require('containers/HelloWorld');
+const NotFoundPage = require('component/Common/404');
+const Counter = require('containers/Counter');
+const configureStore = require('store/configureStore');
 
-const AppRoute = ({ store, history }) => (
-    <Provider store={store}>
-        <Router history={browserHistory}>
-            <Route path="/" >
-                <IndexRoute component={helloWorld}/>
-                <Route path="counter" component={Counter} />
-                <Route path="*" component={NotFoundPage} />
-            </Route>
-        </Router>
-    </Provider>
-)
+// const store = configureStore(window.__INITIAL_STATE__)
+const store = configureStore(window.__REDUX_DEVTOOLS_EXTENSION__
+    && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+const AppRoute = () => (
+  <Provider store={store}>
+    <Router history={browserHistory}>
+      <Route path="/" >
+        <IndexRoute component={helloWorld} />
+        <Route path="counter" component={Counter} />
+        <Route path="*" component={NotFoundPage} />
+      </Route>
+    </Router>
+  </Provider>
+);
 
 export default AppRoute;
