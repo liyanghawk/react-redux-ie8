@@ -18,5 +18,9 @@ in IE8
 typeof con[method] 为object
 ```
 参考[FYI: Doesn't abstract console.log differences between IE & Chrome #8](https://github.com/paulmillr/console-polyfill/issues/8)
-* 添加eslint-import-resolver-webpack解决webpack中alias问题
+* 添加eslint-import-resolver-webpack解决webpack中alias问题，提供eslint的解析
 参考https://stackoverflow.com/questions/41476397/eslint-webpack-resolver-doesnt-work
+* 在webpack.config.production.js文件中添加UglifyJsPlugin@2.7.5+Es3ifyPlugin兼容压缩后的文件，文件命名混淆、压缩、去除注释等，压缩比大约4:1
+参考
+    * [阿里巴巴UED](http://www.aliued.com/?p=3240)
+    * [webpack@2.7.5-UglifyJsPlugin]http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin

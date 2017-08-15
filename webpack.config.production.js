@@ -8,7 +8,6 @@ const Es3ifyPlugin = require('es3ify-webpack-plugin');
 module.exports = {
   entry: {
     entry: './src/entry.js',
-    /*vendor: ['console-polyfill', 'es5-shim', 'es5-shim/es5-sham', 'es6-promise', 'fetch-ie8', 'es3ify-loader', 'react', 'react-dom', 'react-router'],*/
   },
   output: {
     path: path.join(__dirname, 'build'),
@@ -17,15 +16,15 @@ module.exports = {
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    // 压缩js文件，ie8支持使用Es3ifyPlugin
+    // 压缩js文件，ie8支持插件使用Es3ifyPlugin
     new webpack.optimize.UglifyJsPlugin({
       mangle: {
-        screw_ie8: false,
-      },
+        screw_ie8: false, // 支持ie8
+      }, // 混淆
       compress: {
-        warnings: false,
-        screw_ie8: false,
-      },
+        warnings: false, // 去除警告
+        screw_ie8: false, // 支持ie8
+      }, // 压缩
       comments: false, // 去除注释
     }),
     new Es3ifyPlugin(),
@@ -42,7 +41,6 @@ module.exports = {
       },
     }),
     new ExtractTextPlugin('css.all.css'),
-    /*new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),*/
   ],
   resolve: {
     // 实际就是自动添加后缀，默认是当成js文件来查找路径

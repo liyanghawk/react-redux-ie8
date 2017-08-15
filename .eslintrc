@@ -3,8 +3,7 @@
   "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "node": true,
-    "mocha": true
+    "node": true
   },
   "globals": {
     "Babel": true,
@@ -14,19 +13,20 @@
     "react"
   ],
   "rules": {
-    "global-require": "off",
+    "global-require": "off", // 关闭require语句需要放置在组件的最上面
     "import/no-unresolved": "off",
-    "no-console": "off",
-    "no-underscore-dangle": "off",
-    "no-new-func": "off",
-    "no-param-reassign": "off",
-    "react/prefer-stateless-function": "off",
-    "react/no-multi-comp": "off",
-    "react/jsx-no-bind": "off",
-    "react/jsx-indent": "off",
-    "react/jsx-first-prop-new-line": "off",
-    "react/jsx-filename-extension": "off",
-    "no-restricted-syntax": "off"
+    "no-console": "off", // 关闭对console的检测
+    "no-debugger": "error",// 关闭no debugger
+    "no-underscore-dangle": "off",// 关闭命名的下划线检测
+    "no-new-func": "off",// 关闭new Function的使用检测
+    "no-param-reassign": "off",// 关闭函数参数的修改检测
+    "react/prefer-stateless-function": "off",// 关闭无状态函数的检测
+    "react/no-multi-comp": "off",// 关闭多个组件在一个文件的检测
+    "react/jsx-no-bind": "off",// 关闭使用bind方法的检测
+    "react/jsx-indent": "off",// 关闭对空格和tab键的检测
+    "react/jsx-first-prop-new-line": "off",// 关闭第一个属性另起一行的检测
+    "react/jsx-filename-extension": "off",// 关闭对文件名后缀的检测
+    "no-restricted-syntax": "off" //关闭对特定语法使用的检测
   },
   "settings": {
     "import/resolver": {

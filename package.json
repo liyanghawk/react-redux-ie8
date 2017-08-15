@@ -1,11 +1,11 @@
 {
   "name": "react-router",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "react-router初版",
   "main": "./src/entry.js",
   "scripts": {
     "start": "webpack-dev-server --history-api-fallback --config webpack.config.dev.js --inline --hot --progress --port 3000",
-    "start:prod": "webpack-dev-server --history-api-fallback --config webpack.config.production.js --progress --port 3001",
+    "start:prod": "webpack-dev-server --history-api-fallback --config webpack.config.production.js --progress --port 3000",
     "build": "npm run clean && npm run build:webpack",
     "build:webpack": "webpack --config webpack.config.dev.js",
     "clean": "rimraf build",
@@ -24,6 +24,7 @@
     "console-polyfill": "^0.3.0",
     "css-loader": "^0.26.1",
     "echarts": "^2.2.8",
+    "es3ify-webpack-plugin": "0.0.1",
     "es5-shim": "^4.5.9",
     "es6-promise": "^3.0.2",
     "eslint": "^4.4.0",
@@ -50,6 +51,7 @@
     "redux-saga": "^0.12.0",
     "redux-thunk": "^2.0.1",
     "style-loader": "^0.13.1",
+    "uglify-js": "^3.0.27",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"

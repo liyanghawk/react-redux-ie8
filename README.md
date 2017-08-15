@@ -90,3 +90,4 @@ webpack.config.production.js     生产配置文件
 
 ## 参考
 * [react-ie8](https://github.com/xcatliu/react-ie8)
+* [阿里巴巴国际UED团队 » react 项目的一个ie8兼容性问题](http://www.aliued.com/?p=3240)
