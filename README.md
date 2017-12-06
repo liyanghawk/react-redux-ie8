@@ -21,6 +21,8 @@ npm start:prod #启动服务生产环境开发（IE8调试）。
 ```
 ### 访问地址
 http://localhost:3000
+http://localhost:3000/counter（加减法示例）
+
 ## 特性
 * [react](https://github.com/facebook/react)
 * [react-router](https://github.com/rackt/react-router)
